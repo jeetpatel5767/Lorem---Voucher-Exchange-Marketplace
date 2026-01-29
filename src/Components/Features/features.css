@@ -1,0 +1,83 @@
+
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    
+}
+
+.features-heading {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.top-cards, .bottom-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.top-card {
+    flex: 1;
+    height: 120px;
+}
+
+.bottom-card.small {
+    flex: 1;
+    height: 100px;
+}
+
+.bottom-card.large {
+    flex: 2;
+    height: 150px;
+}
+
+
+.scrolling-text {
+    white-space: nowrap; /* Prevent text wrapping */
+    box-sizing: border-box; /* Include padding in width */
+    width: 100%; /* Full width */
+    position: relative; /* Position relative for animation */
+    color: white;
+}
+
+.scrolling-text p {
+    display: inline-block; /* Inline block for scrolling effect */
+    animation: loop 10s linear infinite; /* Animation for scrolling */
+    font-size: 80px; /* Font size for the scrolling text */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes loop {
+    0% {
+        transform: translateX(0); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-50%); /* Move to the left */
+    }
+} 

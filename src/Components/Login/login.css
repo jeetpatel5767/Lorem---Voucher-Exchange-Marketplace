@@ -1,0 +1,127 @@
+
+.login-container {
+  background-image: url('../../assets/123.png') , url('../../assets/bg.png');
+  background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(26, 26, 26, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .login-box {
+    background: linear-gradient(to bottom right, #151515 0%, #222325 22%, rgba(65, 65, 65, 0.125) 100%, #AFAFAF 100%);  
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+
+  .login-box h2 {
+    font-size: 4rem;
+    margin: 10px 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: white;
+  }
+
+  input:focus{
+    border: 1px solid #ffcc66 ;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffcc66;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: white;
+  }
+  
+
+  .login-heading {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 80%;
+    color: #fff;
+  }
+  
+
+  .corner-image {
+    position: absolute;
+    width: 400px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  .top-left {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .top-right {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .bottom-left {
+    bottom: 0px;
+    left: -10px;
+  }
+  
+  .bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+
+  .top-button {
+    color: #FFCC66;
+    border: 0.25px solid white;
+    background-color: transparent;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-bottom: -20px;
+}

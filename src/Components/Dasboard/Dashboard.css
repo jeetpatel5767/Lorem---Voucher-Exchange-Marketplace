@@ -1,0 +1,408 @@
+/* Sidebar */
+body {
+  margin: 0;
+  background-image: url('../../assets/123.png');
+  background-color: #0e0e0e;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.sidebar {
+  width: 100px; /* Permanently shrunk */
+  background: #FFCC66;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  border-radius: 18px;
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  color: #151515;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Playwrite US Modern', sans-serif;
+  position: relative; /* Needed for absolute positioning of the underline */
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: 5px; /* Adjusts the line position */
+  width: 25px; /* Adjust width as needed */
+  height: 3px; /* Thickness of the underline */
+  background-color: #ffcc66; /* Line color */
+}
+
+
+/* Menu */
+.menu {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center menu items */
+  flex-grow: 1;
+}
+
+/* Menu Items */
+.menu-item {
+  width: 50px; /* Match icon size */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.menu-item.selected {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ffffff;
+}
+
+/* Menu Icons */
+.menu-icon {
+  font-size: 24px;
+  color: #151515;
+}
+
+.add-icon-container {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: black;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.add-icon-container:hover {
+  background: rgba(255, 255, 255, 0.8);
+  animation: rotate360 0.5s linear;
+}
+
+/* Main Content */
+.search-bar-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 90px; /* Adjust for fixed sidebar */
+  color: white;
+  transition: margin-left 0.3s ease;
+}
+
+/* Search Bar */
+.search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other content */
+  display: flex;
+  align-items: center;
+  background-color: #17191A; /* Off-white color */
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: white;
+  width: 98%;
+  margin: -10px 20px;
+  gap: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Selected Category (Dashboard, Notification, etc.) */
+.search-category {
+  font-size: 24px;
+  font-weight: bold;
+  flex-shrink: 0;
+   /* Fixed width */
+  text-transform: capitalize;
+}
+
+/* Search Input */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #0e0e0e;
+  padding: 8px 12px;
+  border-radius: 50px;
+  flex-grow: 1;
+  width: 50px;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: white;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  color: black;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: white;
+}
+
+/* User Icon */
+.user-icon {
+  font-size: 42px;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column; /* Everything falls under each other */
+  gap: 20px; /* Adds spacing between sections */
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between; /* Keeps cards side by side */
+  gap: 15px;
+  margin-top: 0; /* Ensures no extra spacing */
+}
+
+.main{
+  margin-top: -15px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 90px; /* Adjust for fixed sidebar */
+  color: black;
+  transition: margin-left 0.3s ease;
+}
+
+/* Search Bar */
+.dashboard-content {
+  display: flex;
+  background-color: #17191A; /* Off-white color */
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  width: 98%;
+  margin: -10px 20px;
+  gap: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.name h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 20px;
+}
+.name span {
+  font-family: 'Playwrite US Modern', sans-serif;
+  font-size: 52px;
+  margin: 20px;
+}
+
+.user-name{
+  margin-top: -30px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between; /* Even spacing */
+  gap: 15px; /* Space between the cards */
+  margin-top: 20px;
+}
+
+.stat-card {
+  background-color: #0e0e0e;
+  flex: 1; /* Equal width */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Ensure icons are consistent in size */
+.icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: #ffcc66;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.card-icon {
+  font-size: 24px; /* Uniform size */
+  color: #0e0e0e;
+  width: 24px; /* Set fixed width */
+  height: 24px; /* Set fixed height */
+}
+
+/* Text styling */
+.stat-info h3 {
+  font-size: 22px; /* Slightly smaller for better balance */
+  margin: 0;
+}
+
+.stat-info p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+.listed-cards {
+  margin-top: 20px;
+}
+
+.listed-cards h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.listed-cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.listed-card {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  background: #0E0E0E;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #FFCC66;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listed-image {
+  background-color: #D9D9D9; /* Placeholder image color */
+  width: 180px;
+  height: 150px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.listed-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.listed-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.listed-date {
+  font-size: 12px;
+  color: gray;
+  margin: 4px 0 10px;
+}
+
+.listed-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.listed-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 16px;
+  font-size: 16px;
+  background: #FFCC66;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  width: 200px; /* Increase width */
+  font-weight: 600;
+}
+
+.listed-button span {
+  flex-grow: 1; /* Pushes text to the left */
+  text-align: left;
+}
+
+.listed-button::after {
+  content: '➜'; /* Unicode arrow */
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.listed-button:hover {
+  background: white;
+  color: black;
+}
+
+.listed-button:hover::after {
+  transform: translateX(4px); /* Slight animation on hover */
+}

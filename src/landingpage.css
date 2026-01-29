@@ -1,0 +1,12 @@
+.LandingPage {
+    background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(26, 26, 26, 1) 100%);
+    overflow: hidden; /* Enables scrolling */
+    height: 100%; /* Ensures it takes full height */
+    width: 100%; /* Full width */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Edge, Safari) */
+.LandingPage .content::-webkit-scrollbar {
+    display: none;
+}

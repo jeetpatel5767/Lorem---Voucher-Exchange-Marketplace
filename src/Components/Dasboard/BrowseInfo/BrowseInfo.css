@@ -1,0 +1,107 @@
+/* Modal Overlay (Blur Effect) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Container (Two Column Layout) */
+  .modal-container {
+    display: flex;
+    background: #0e0e0e;
+    width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Section (Image Placeholder) */
+  .voucher-image {
+    background: #dfdfdf;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  
+  /* Right Section (Details) */
+  .voucher-details {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  /* Title */
+  .voucher-title {
+    font-size: 20px;
+    color: #FFCC66;
+    margin-bottom: 10px;
+  }
+  
+  /* Voucher Info */
+  .voucher-info {
+    font-size: 14px;
+    color: #999;
+    margin: 5px 0;
+  }
+  
+  /* Voucher Description */
+  .voucher-description {
+    font-size: 14px;
+    color: #ccc;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  /* Voucher Code */
+  .voucher-code {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFCC66;
+    margin: 10px 0;
+  }
+  
+  /* Close Button */
+  .send-button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #FFCC66;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    height: 40px;
+  }
+  
+  .send-button:hover {
+    background: #FFC107;
+  }
+  
+
+  .BrowesInfo-close-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+  }
+  
+  .BrowesInfo-close-button:hover {
+    background: #555;
+  }

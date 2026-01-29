@@ -1,0 +1,222 @@
+.notification-container {
+  padding: 30px;
+  background-color: #17191A;
+  color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: -10px;
+  width: 95%;
+}
+
+.exchange-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping when space is limited */
+  gap: 15px;
+}
+
+.exchange-card {
+  display: flex;
+  width: 420px;
+  background: #0E0E0E;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #FFCC66;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Aligns items side by side */
+/* Right side - Details (Stack content vertically) */
+.exchange-content {
+  display: flex;
+  flex-direction: column; /* Makes elements stack vertically */
+  justify-content: center;
+  padding-left: 15px;
+  flex-grow: 1;
+}
+
+
+/* Left side - Image Placeholder */
+.rectangle-placeholder {
+  background-color: #DFDFDF;
+  width: 150px;  /* Increase width */
+  height: 150px; /* Increase height */
+  border-radius: 8px;
+}
+
+
+/* Right Side - Details */
+.exchange-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  flex-grow: 1;
+}
+
+.exchange-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.exchange-user,
+.exchange-time {
+  font-size: 14px;
+  color: gray;
+  margin: 2px 0;
+}
+
+.exchange-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background: #FFCC66;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Ensures buttons are aligned properly */
+.exchange-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.exchange-button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* Add to your existing CSS */
+.exchange-button.accept-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.exchange-button.accept-button:hover {
+  background-color: #45a049;
+}
+
+.exchange-status {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.exchange-status.completed {
+  color: #4CAF50;
+}
+
+.exchange-status.rejected {
+  color: #f44336;
+}
+
+.exchange-status.pending {
+  color: #FFC107;
+}
+
+.loading-overlay, .error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1000;
+}
+
+.loading-overlay p, .error-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.error-overlay button {
+  padding: 8px 16px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exchange-status {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.exchange-status.completed {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.exchange-status.rejected {
+  background-color: #f44336;
+  color: white;
+}
+
+.exchange-status.pending {
+  background-color: #FFC107;
+}
+
+/* Add to your Notification.css */
+.completed-exchange {
+  background-color: #f0fff0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.voucher-code-display {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #e6f7ff;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.voucher-code-display code {
+  font-family: monospace;
+  font-size: 1.1em;
+  color: #1890ff;
+}
+
+.voucher-code-container {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.voucher-code-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.voucher-code {
+  font-family: monospace;
+  font-size: 1.1em;
+  color: #2c3e50;
+  word-break: break-all;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+}
